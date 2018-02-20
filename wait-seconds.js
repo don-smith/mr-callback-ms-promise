@@ -3,7 +3,7 @@ module.exports = {
   withPromise: withPromise
 }
 
-var ERR_MSG = 'Error: Seconds must be a number'
+const ERR_MSG = 'Error: Seconds must be a number'
 
 function withCallback (seconds, callback) {
   if (typeof seconds !== 'number') {

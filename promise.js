@@ -1,4 +1,4 @@
-var waitSeconds = require('./wait-seconds').withPromise
+const waitSeconds = require('./wait-seconds').withPromise
 
 module.exports = {
   pass: pass,

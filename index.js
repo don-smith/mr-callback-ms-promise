@@ -1,5 +1,5 @@
-var callbackExample = require('./callback')
-var promiseExample = require('./promise')
+const callbackExample = require('./callback')
+const promiseExample = require('./promise')
 
 /* 
  * Uncomment the line of interest
