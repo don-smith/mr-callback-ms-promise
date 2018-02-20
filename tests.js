@@ -1,10 +1,11 @@
-var test = require('tape')
-var waitWithCallback = require('./wait-seconds').withCallback
-var waitWithPromise = require('./wait-seconds').withPromise
-var ERR_MSG = 'Error: Seconds must be a number'
+const test = require('tape')
+const waitWithCallback = require('./wait-seconds').withCallback
+const waitWithPromise = require('./wait-seconds').withPromise
+const ERR_MSG = 'Error: Seconds must be a number'
 
 test('passing callback succeeds with number', function (t) {
   waitWithCallback(2, function (err, msg) {
+    if (err) { console.error(err) }
     t.equals(msg, "Here's my number, so call me maybe.")
     t.end()
   })
@@ -12,6 +13,7 @@ test('passing callback succeeds with number', function (t) {
 
 test('failing callback fails with string', function (t) {
   waitWithCallback('2', function (err, msg) {
+    if (err) { console.error(err) }
     t.equals(err.message, ERR_MSG)
     t.end()
   })

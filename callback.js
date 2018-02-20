@@ -1,4 +1,4 @@
-var waitSeconds = require('./wait-seconds').withCallback
+const waitSeconds = require('./wait-seconds').withCallback
 
 module.exports = {
   pass: pass,
